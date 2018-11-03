@@ -2,7 +2,7 @@ New homepage for docspot.com
 ===============================
 
 ## Project Summary:
-The goal of this project is to give docspot.com a new look and feel, improve its user experience, fix the responsive issue, presents docspot's search feature clearly and nicely. 
+The goal of this project is to give docspot.com's homepage a new look and feel, improve its user experience, fix the responsive issue, presents docspot's search feature clearly and nicely. 
 
 ## DocSpot home page redesign questionnaire
 ### 24th September 2018
