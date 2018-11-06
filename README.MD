@@ -16,7 +16,7 @@ The goal of this project is to give docspot.com's homepage a new look and feel, 
 1. ![](old_homepage_screenshot/3steps.jpg)
 Very busy, too much text, not sure how helpful it is for user (expecial first time user). The gradient background is not modern, seems old.
 2. ![](old_homepage_screenshot/somedropdown.jpg)Doesn’t work well with the header, looks like a white bar that randomly “pasted” there.
-3.	 ![](old_homepage_screenshot/somedropdown.jpg)Too much text, not 100% responsive 
+3.	 ![](old_homepage_screenshot/quicksearch.jpg)Too much text, not 100% responsive 
 4.	 ![](old_homepage_screenshot/lineoftext.jpg)This line of text doesn’t feel part of the page
 5.	 ![](old_homepage_screenshot/docreviews.jpg)The reviews for doctors section is too busy, too much text. Not 100% responsive. The arrow pointing the date which doesn’t make sense. The doctor’s title seems too long. Feel like the person with avatar left the review.
 6.	 ![](old_homepage_screenshot/somelinks.jpg)The layout doesn’t seem right.

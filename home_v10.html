@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="./bootstrap-4.1.3-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/v10.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./bootstrap-4.1.3-dist/js/bootstrap.bundle.js">
+  </script>
+
+</head>
+<body>
+  <!--nav item right example: https://www.codeply.com/go/ljI9F6aRLk -->
+  <section class="container-fluid py-4 position-relative">
+    <nav class="navbar-expand-md">
+      <a href="#">
+        <img src="./img/logo_transparent.png" alt="docspot's logo" class="logo-img">
+      </a>
+      <div class="mobile-menu position-relative">
+        <button class="navbar-toggler float-right pr-0" type="button" data-toggle="collapse" data-target="#navItems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars text-light fa-lg"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navItems">
+          <a href="#" class="nav-item nav-link text-left">Leave a review</a>
+          <a href="#" class="nav-item nav-link text-left">Provider Login</a>
+          <a href="#" class="nav-item nav-link text-left">link 3</a>
+          <a href="#" class="nav-item nav-link text-left">link 4</a>
+        </div>
+      </div>
+      <ul class="navbar-nav float-right d-none d-md-flex">
+        <li class="nav-item mx-md-3">
+          <button type="button" name="button" class="btn btn-sm btn-block btn-light">Leave a review</button>
+        </li>
+        <li class="nav-item mx-md-2">
+          <button type="button" name="button" class="btn btn-sm btn-block btn-outline-light">Link 2</button>
+        </li>
+      </ul>
+      <p class="mt-2 slogan">Simplifying Your Search For the Right Doctors</p>
+    </nav>
+  </section>
+
+  <section class="bkgimg">
+  </section>
+
+  <section class="container-fluid mt-5 py-4">
+    <section class="w-xl-75 py-3 text-center search-form-container mx-auto">
+      <!-- <div class="row mb-3">
+        <div class="col-12 mt-5">
+          <h2 class="my-4 text-white " style="line-height: 2.8rem;">Simplifying Your Search For the Right Doctors</h2>
+        </div>
+      </div> -->
+
+      <!-- including position-relative otherwise won't stay on top of overlay -->
+      <div class="form-row search-form-row mb-5 position-relative">
+        <div class="col-sm-12 col-md-6 mb-3 pr-md-0">
+          <i class="fas fa-search search-icon fa-lg"></i>
+          <input type="text" style="color: var(--dark);" class="provider-searchbar has-search-icon form-control form-control-lg" >
+          <ul class="list-group position-absolute quicksearch text-left d-none">
+            <li class="list-group-item py-1">Quick Search</li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Primary Care</a></li>
+            <li class="list-group-item py-1 pl-5"><a href="#">General Internal Medicine</a></li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Dentist</a></li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Optometry</a></li>
+          </ul>
+
+          <ul class="list-group position-absolute results text-left d-none">
+            <li class="list-group-item py-1">Suggested Results</li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Chronic Daily Headache Primary Care Anthem</a></li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Daily Headache and Dizziness United Healthcare</a></li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Head and Neck Surgery Kaiser</a></li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Headache Internal Medicine Without Insurance</a></li>
+
+            <li class="list-group-item py-1">Quick Search</li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Primary Care</a></li>
+            <li class="list-group-item py-1 pl-5"><a href="#">General Internal Medicine</a></li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Dentist</a></li>
+            <li class="list-group-item py-1 pl-5"><a href="#">Optometry</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-3 mb-3 pl-md-0">
+          <i class="fas fa-map-marker-alt search-icon fa-lg"></i>
+          <input type="text" style="color: var(--dark);" class="location-searchbar has-search-icon form-control form-control-lg" >
+        </div>
+        <div class="col-sm-12 col-md-3 mb-3">
+          <button class="btn btn-lg btn-primary btn-block" type="button" name="button">Search</button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="container-fluid py-4 recent-reviews-section">
+    <section class="container text-center">
+      <h3>Recent reviews for doctors</h3>
+      <p class="my-3">
+        <a href="#">
+          <i class="far fa-edit"></i>
+          Write your review
+        </a>
+      </p>
+    </section>
+    <section class="container">
+      <div class="row">
+        <!-- single card -->
+        <div class="col-md-12 col-lg-6 single-card">
+          <div class="card mb-5 shadow">
+            <div class="row no-gutters p-4">
+              <div class="col-3 col-md-2">
+                <div class="card-img-left">
+                </div>
+              </div>
+              <div class="col-9 col-md-10 pl-4">
+                <div class="card-block">
+                  <div class="card-title mb-3">
+                    <h4>Dr.Arnold Son</h4>
+                    <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i>
+                  </div>
+                  <!-- <p class="card-text">Obstetrics & Gynecology</p> -->
+                  <div>
+                    <h5>Very Good Doctor - Listens to needs</h5>
+                    <p class="text-dark">October 2018</p>
+                    <p class="card-text">
+                      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia dolores eos...
+                      <a href="#" class="text-primary">continue reading</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <div id="background-filter" class="d-none">
+  </div>
+
+  <footer class="container-fluid bg-primary py-2">
+    <section class="container text-center text-md-left text-white mt-5 footer">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold border-bottom pb-2 mb-4 d-inline-block">docspot</h6>
+          <!-- <hr class="bg-white mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+          <p>DocSpot.com empowers people to find providers that are right for their individual needs by increasing the transparency and navigability of relevant information.</p>
+        </div>
+        <div class="col-md-3 col-lg-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold border-bottom pb-2 mb-4 d-inline-block">learn more</h6>
+          <!-- <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+          <p>
+            <a href="#!">About Us</a>
+          </p>
+          <p>
+            <a href="#!">Blog</a>
+          </p>
+          <p>
+            <a href="#!">Terms of Serivce</a>
+          </p>
+          <p>
+            <a href="#!">Subscriptions</a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold text-uppercase font-weight-bold border-bottom pb-2 mb-4 d-inline-block">support</h6>
+          <!-- <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+          <p>
+            <a href="#!">Contact DocSpot</a>
+          </p>
+          <p>
+            <a href="#!">FAQ</a>
+          </p>
+          <p>
+            <a href="#!">Sitemap</a>
+          </p>
+          <p>
+            <a href="#!">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script type="text/javascript">
+    //show dark overlay when focus on input field
+    const providerSearchBar = $('.provider-searchbar');
+    providerSearchBar.on('focus', () => {
+      $('.quicksearch').removeClass('d-none');
+      $('#background-filter').removeClass('d-none');
+      $('.search-form-row').css('z-index', 9999);
+    });
+
+    providerSearchBar.on('blur', () => {
+      $('.quicksearch').addClass('d-none');
+      $('.results').addClass('d-none');
+      $('#background-filter').addClass('d-none');
+      $('.search-form-row').css('z-index', 'initial');
+    });
+
+    providerSearchBar.on('input', (e) => {
+      $('.quicksearch').addClass('d-none');
+      $('.results').removeClass('d-none');
+
+      if($(e.target).val() === '') {
+        $('.quicksearch').addClass('d-none');
+        $('.results').addClass('d-none');
+      }
+    });
+
+    //toggle dark overlay when click on hamburger menu
+    $('.navbar-toggler').on('click', () => {
+      $('#background-filter').toggleClass('d-none');
+    });
+
+    const displayMatches = (e) => {
+      $('.list-group-item a').each(function() {
+        let regex = new RegExp(e.target.value,'gi');
+        let isMatched = $(this).text().match(regex);
+        //isMatched is an array,
+        if(isMatched) {
+          let text = $(this).text().replace(isMatched[0] ,`<strong>${isMatched[0]}</strong>`);
+          $(this).html(text);
+        }
+      });
+
+    }
+
+    providerSearchBar.on('change', displayMatches);
+    providerSearchBar.on('keyup', displayMatches);
+
+    let e = $('.single-card');
+    let imgNum = 1;
+    for (let i = 0; i < 3; i++) {
+      imgNum++;
+      let newCard = e.clone();
+      //console.log(newCard);
+      $(newCard).find('.card-img-left').each(function() {
+        $(this).css('background-image', 'url(../REDESIGN/img/human'+imgNum+'.png)');
+      })
+      newCard.insertAfter(e);
+    }
+
+    // let index = 2;
+    // $('.fa-arrow-left').on('click', () => {
+    //   index--;
+    //   if (index == 0) {
+    //     index = 36;
+    //   }
+    //   $('.first-section-has-bkgimg').css('background-image', 'linear-gradient( rgba(112, 96, 96, 0.55), rgba(112, 96, 96, 0.55) ), url( ../REDESIGN/img/carousel/' + index + '.jpg)');
+    //   console.log(index);
+    //
+    // });
+    //
+    // $('.fa-arrow-right').on('click', () => {
+    //   index++;
+    //   if (index == 37) {
+    //     index = 1;
+    //   }
+    //   $('.first-section-has-bkgimg').css('background-image', 'linear-gradient( rgba(112, 96, 96, 0.55), rgba(112, 96, 96, 0.55) ), url( ../REDESIGN/img/carousel/' + index + '.jpg)');
+    //   console.log(index);
+    //
+    // });
+
+  </script>
+
+</body>
+</html>
