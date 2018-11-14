@@ -13,14 +13,14 @@ The goal of this project is to give docspot.com's homepage a new look and feel, 
 2. Content stays in the center of the page which is easy to follow
 
 **What areas need improvement or not working well (feel free to include screenshot)? Why they don’t work well?**
-1. ![](old_homepage_screenshot/3steps.jpg)
+1. ![](old_pages_screenshot/3steps.jpg)
 Very busy, too much text, not sure how helpful it is for user (expecial first time user). The gradient background is not modern, seems old.
-2. ![](old_homepage_screenshot/somedropdown.jpg)Doesn’t work well with the header, looks like a white bar that randomly “pasted” there.
-3.	 ![](old_homepage_screenshot/quicksearch.jpg)Too much text, not 100% responsive 
-4.	 ![](old_homepage_screenshot/lineoftext.jpg)This line of text doesn’t feel part of the page
-5.	 ![](old_homepage_screenshot/docreviews.jpg)The reviews for doctors section is too busy, too much text. Not 100% responsive. The arrow pointing the date which doesn’t make sense. The doctor’s title seems too long. Feel like the person with avatar left the review.
-6.	 ![](old_homepage_screenshot/somelinks.jpg)The layout doesn’t seem right.
-7.	 ![](old_homepage_screenshot/slogan.jpg)The tagline is small. Not sure how helpful is it for users.
+2. ![](old_pages_screenshot/somedropdown.jpg)Doesn’t work well with the header, looks like a white bar that randomly “pasted” there.
+3.	 ![](old_pages_screenshot/quicksearch.jpg)Too much text, not 100% responsive 
+4.	 ![](old_pages_screenshot/lineoftext.jpg)This line of text doesn’t feel part of the page
+5.	 ![](old_pages_screenshot/docreviews.jpg)The reviews for doctors section is too busy, too much text. Not 100% responsive. The arrow pointing the date which doesn’t make sense. The doctor’s title seems too long. Feel like the person with avatar left the review.
+6.	 ![](old_pages_screenshot/somelinks.jpg)The layout doesn’t seem right.
+7.	 ![](old_pages_screenshot/slogan.jpg)The tagline is small. Not sure how helpful is it for users.
 
 **What make DocSpot unique on the market?**
 1.	DocSpot empowers users to search across many different sources. Not only have we indexed many hospital directories, we have also worked on integrating government data.
