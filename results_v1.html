@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search Results</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="./bootstrap-4.1.3-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/v10.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./bootstrap-4.1.3-dist/js/bootstrap.bundle.js">
+  </script>
+  <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=Ap1Oq6uu_n-JR3hvdfrw9Icnc03TGMxrgJLgOrPePHJ2rAFVwQRjRkji0qPtmGMa'></script>
+
+<!-- text effect -->
+<!-- https://stackoverflow.com/questions/44672914/css-text-carousel-with-fixed-text -->
+</head>
+<body onload='loadMapScenario();'>
+  <!-- background overlay -->
+  <div id="background-filter" class="d-none">
+  </div>
+  <!--nav item right example: https://www.codeply.com/go/ljI9F6aRLk -->
+  <section class="container-fluid p-4 border-bottom">
+    <nav class="navbar-expand-md">
+      <a href="#">
+        <img src="./img/logo_transparent.png" alt="docspot's logo" class="logo-img">
+      </a>
+      <div class="mobile-menu position-relative">
+        <button class="ham-menu navbar-toggler float-right pr-0" type="button" data-toggle="collapse" data-target="#navItems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navItems">
+          <a href="#" class="nav-item nav-link text-left">Leave a review</a>
+          <a href="#" class="nav-item nav-link text-left">Provider Login</a>
+          <a href="#" class="nav-item nav-link text-left">link 3</a>
+          <a href="#" class="nav-item nav-link text-left">link 4</a>
+        </div>
+      </div>
+      <ul class="navbar-nav float-right d-none d-md-flex navbar-nav-mobile">
+        <li class="nav-item mx-md-3">
+          <button type="button" name="button" class="btn btn-sm btn-block btn-primary">Leave a review</button>
+        </li>
+        <li class="nav-item mx-md-2">
+          <button type="button" name="button" class="btn btn-sm btn-block btn-outline-primary">Link 2</button>
+        </li>
+      </ul>
+      <p class="mt-2 mb-0 slogan">Simplifying Your Search For the Right Doctors</p>
+    </nav>
+  </section>
+
+  <!-- key words -->
+  <section class="container-fluid text-center first-section py-4 border-bottom">
+    <section class="container">
+      <h4 class="mb-0">We found 198 doctors matches <strong>primary care, headache, no insurance</strong> near <strong>San Jose, CA</strong></h4>
+    </section>
+  </section>
+
+  <div class="half-half-lg d-flex justify-content-center">
+    <div class="left-half-lg p-2">
+      <!-- sort and filter button -->
+      <section class="container mt-4">
+        <section class="">
+          <label for="">Sort By:</label>
+          <select class="form-control sort-result" name="">
+            <option value="">Default</option>
+            <option value="">Ratings</option>
+          </select>
+          <button type="button" name="button" class="btn btn-outline-primary float-right open-filter-btn">Filter</button>
+        </section>
+      </section>
+
+      <!-- cards -->
+      <section class="container py-4">
+        <p>Showing 1 - 4 of 198</p>
+        <div class="row">
+          <!-- single card -->
+          <div class="col-md-12 col-xxl-6 single-card">
+            <div class="card mb-5 shadow">
+              <div class="row no-gutters p-4">
+                <div class="col-3 col-md-2">
+                  <div class="card-img-left">
+                  </div>
+                </div>
+                <div class="col-9 col-md-10 pl-4">
+                  <div class="card-block">
+                    <div class="card-title mb-3">
+                      <h4>Dr.Arnold Son</h4>
+                      <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i>
+                      <a href="">(34 reviews)</a>
+                    </div>
+                    <!-- <p class="card-text">Obstetrics & Gynecology</p> -->
+                    <div>
+                      <h5 class="border-bottom pb-3">Internal Medicine, Primary Care, Adult Medicine</h5>
+                      <p class="card-text mb-2">
+                        14251 Winchester Boulevard, Suite 200, Los Gatos, CA 95032
+                      </p>
+                      <p class="card-text">
+                        (408) 000-0000
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav aria-label="Page navigation" class="my-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">20</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <div class="right-half-lg">
+      <div class="map-view d-none d-lg-block">
+        <div class="d-flex justify-content-between align-items-center p-3 d-block d-lg-none">
+          <div class="mr-3">
+            <i class="map-nav-icons map-close fas fa-times fa-lg text-secondary" style="position: relative; top: 2px;"></i>
+          </div>
+          <div class="flex-grow-1">
+            <i class="fas fa-search search-icon-filter" style="line-height: 2.4rem;"></i>
+            <input type="text" class="search-filter form-control" placeholder="search docspot">
+          </div>
+        </div>
+        <button type="button" name="button" class="btn btn-primary open-filter-btn map-open-filter-btn d-block d-lg-none">Filter</button>
+        <div id="myMap">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- filter-menu -->
+  <section class="filter-menu px-4 pt-0">
+    <div class="filter-content">
+      <!-- top bar -->
+      <div class="filter-top d-flex justify-content-between border-bottom pt-4">
+        <i class="fas fa-times fa-lg filter-menu-close" style="position: relative; top: 0.4rem; padding-right: 90px;"></i>
+        <p>Clear all filters</p>
+      </div>
+      <!-- ratings -->
+      <div class="filter-avgreviews border-bottom py-3">
+        <p class="font-weight-bold">Avg. Ratings</p>
+        <div class="row mx-0">
+          <div class="form-check col-6 pl-0">
+            <label class="form-check-label">
+              <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i> (30)
+            </label>
+          </div>
+          <div class="form-check col-6 pl-0">
+            <label class="form-check-label">
+              <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="far fa-star text-warning"></i> (110)
+            </label>
+          </div>
+          <div class="form-check col-6 pl-0">
+            <label class="form-check-label">
+              <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="far fa-star text-warning"></i><i class="far fa-star text-warning"></i> (139)
+            </label>
+          </div>
+          <div class="form-check col-6">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="optcheckbox">Unknown (59)
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- gender -->
+      <div class="filter-gender border-bottom py-3">
+        <p class="font-weight-bold">Gender</p>
+        <div class="row mx-0">
+          <div class="form-check col-6">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" value="100">Male (100)
+            </label>
+          </div>
+          <div class="form-check col-6">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" value="100">Female (100)
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- new patient  -->
+      <div class="filter-new-patient border-bottom py-3">
+        <p class="font-weight-bold">New Patient</p>
+        <div class="row mx-0">
+          <div class="form-check col-6">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="optcheckbox" value="55">Not accepting (55)
+            </label>
+          </div>
+          <div class="form-check col-6">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="optradio" value="120">Accpeting (120)
+            </label>
+          </div>
+          <div class="form-check col-6">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="optcheckbox" value="25">Unknown (25)
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- insurance -->
+      <nav class="navbar letnavbar-transparent bg-transparent px-0 border-bottom">
+        <span class="font-weight-bold" href="#">Insurance</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#insurance-menu" aria-controls="insurance-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-angle-down rotate-if-collapsed"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="insurance-menu">
+          <div class="navbar-nav">
+            <i class="fas fa-search search-icon-filter"></i>
+            <input type="text" class="search-filter form-control my-3" placeholder="Insurance name">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="90">Medicare (90)
+              </label>
+            </div>
+            <div class="form-check form-check-children">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="90">Medicare Advantage (90)
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optradio" value="75">Aetna (75)
+              </label>
+            </div>
+            <div class="form-check form-check-children">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="30">Aetna HMO (30)
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="5">HealthSmart (5)
+              </label>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- language -->
+      <nav class="navbar letnavbar-transparent bg-transparent px-0 border-bottom">
+        <span class="font-weight-bold" href="#">Language Spoken</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#language-menu" aria-controls="language-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-angle-down rotate-if-collapsed"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="language-menu">
+          <div class="navbar-nav">
+            <i class="fas fa-search search-icon-filter"></i>
+            <input type="text" class="search-filter form-control my-3" placeholder="Language spoken">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="12">Français (12)
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optradio" value="38">Español (38)
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="11">日本語 (11)
+              </label>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- conditions -->
+      <nav class="navbar letnavbar-transparent bg-transparent px-0 border-bottom">
+        <span class="font-weight-bold" href="#">Conditions / Treatments</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#condition-menu" aria-controls="condition-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-angle-down rotate-if-collapsed"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="condition-menu">
+          <div class="navbar-nav">
+            <i class="fas fa-search search-icon-filter"></i>
+            <input type="text" class="search-filter form-control my-3" placeholder="Conditions or Treatments">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="123">Immune Disorders (123)
+              </label>
+            </div>
+            <div class="form-check form-check-children">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="23">Allergies (23)
+              </label>
+            </div>
+            <div class="form-check form-check-children">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="100">Airborne Allergy (100)
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optradio" value="69">Lung Problems (69)
+              </label>
+            </div>
+            <div class="form-check form-check-children">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="69">Obstructive Lung Disease (69)
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="optcheckbox" value="8">Cough (8)
+              </label>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- other information -->
+      <nav class="navbar letnavbar-transparent bg-transparent px-0 border-bottom">
+        <span class="font-weight-bold" href="#">Filter by other information</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#otherinfo-menu" aria-controls="otherinfo-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-angle-down rotate-if-collapsed"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="otherinfo-menu">
+          <div class="navbar-nav">
+            <i class="fas fa-search search-icon-filter"></i>
+            <input type="text" class="search-filter form-control my-3" placeholder="What do you care about?">
+
+            <!-- patient demographic -->
+            <nav class="navbar letnavbar-transparent bg-transparent px-0 border-bottom form-check-children">
+              <span class="font-weight-bold" href="#">Patient Demographic</span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demographic-menu" aria-controls="demographic-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-angle-down rotate-if-collapsed"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="demographic-menu">
+                <div class="navbar-nav">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="7">Teenager (7)
+                    </label>
+                  </div>
+                  <div class="form-check form-check-children">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="3">Pediatric (3)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="10">Infant (10)
+                    </label>
+                  </div>
+                  <div class="form-check form-check-children">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optradio" value="3">Pediatric (3)
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            <!-- Residency -->
+            <nav class="navbar letnavbar-transparent bg-transparent px-0 border-bottom form-check-children">
+              <span class="font-weight-bold" href="#">Residency</span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#residency-menu" aria-controls="residency-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-angle-down rotate-if-collapsed"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="residency-menu">
+                <div class="navbar-nav">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="1">Cleveland Clinic (1)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="1">Scripps Mercy Hospital, San Diego (1)
+                    </label>
+                  </div>
+                  <div class="form-check form-check-children">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="1">Scripps Mercy Hospital - West, San Diego (1)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="44">Unknown (44)
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            <!-- affiliation -->
+            <nav class="navbar letnavbar-transparent bg-transparent px-0 border-bottom form-check-children">
+              <span class="font-weight-bold" href="#">Practice Affiliation</span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#affiliation-menu" aria-controls="affiliation-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-angle-down rotate-if-collapsed"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="affiliation-menu">
+                <div class="navbar-nav">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="9">Stanford Medicine (9)
+                    </label>
+                  </div>
+                  <div class="form-check form-check-children">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="9">Stanford Health Care (SHC) (9)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="8">Good Samaritan Hospital (8)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="17">Sutter Health (17)
+                    </label>
+                  </div>
+                  <div class="form-check form-check-children">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optradio" value="16">Sutter Medical Network (16)
+                    </label>
+                  </div>
+                  <div class="form-check form-check-children">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optradio" value="1">Sutter Maternity and Surgery Center of Santa Cruz (1)
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            <!-- credentials -->
+            <nav class="navbar letnavbar-transparent bg-transparent px-0 border-bottom form-check-children">
+              <span class="font-weight-bold" href="#">Credentials</span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#credentials-menu" aria-controls="credentials-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-angle-down rotate-if-collapsed"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="credentials-menu">
+                <div class="navbar-nav">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="284">Physician (284)
+                    </label>
+                  </div>
+                  <div class="form-check form-check-children">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="32">DO (32)
+                    </label>
+                  </div>
+                  <div class="form-check form-check-children">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="253">MD (253)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="191">Nurses (191)
+                    </label>
+                  </div>
+                  <div class="form-check form-check-children">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="191">Advanced Practice Nursing Providers (191)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <div class="form-check form-check-children">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="optradio" value="4">DNP (4)
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <div class="form-check form-check-children">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="optradio" value="191">Nurse Practitioner (191)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            <!-- online communication -->
+            <nav class="navbar letnavbar-transparent bg-transparent px-0 border-bottom form-check-children">
+              <span class="font-weight-bold" href="#">Online Communication</span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#online-communication-menu" aria-controls="online-communication-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-angle-down rotate-if-collapsed"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="online-communication-menu">
+                <div class="navbar-nav">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="21">Allows online scheduling (21)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="90">Accepts online scheduling (90)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optcheckbox" value="1">Allows patients to request prescription renewals online (1)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="optradio" value="42">Uses an EHR recognized by Medicare and Medicaid (42)
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="filter-btn-container p-4">
+      <button type="button" name="button" class="btn btn-primary btn-block">Show results</button>
+    </div>
+  </section>
+
+  <div class="map-view-icon d-block d-lg-none">
+    <i class="fas fa-map-marked-alt fa-2x shadow-sm"></i>
+  </div>
+
+  <footer class="container-fluid bg-primary py-2">
+    <section class="container text-center text-md-left text-white mt-5 footer">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold border-bottom pb-2 mb-4 d-inline-block">docspot</h6>
+          <!-- <hr class="bg-white mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+          <p>DocSpot.com empowers people to find providers that are right for their individual needs by increasing the transparency and navigability of relevant information.</p>
+        </div>
+        <div class="col-md-3 col-lg-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold border-bottom pb-2 mb-4 d-inline-block">learn more</h6>
+          <!-- <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+          <p>
+            <a href="#!">About Us</a>
+          </p>
+          <p>
+            <a href="#!">Blog</a>
+          </p>
+          <p>
+            <a href="#!">Terms of Serivce</a>
+          </p>
+          <p>
+            <a href="#!">Subscriptions</a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold text-uppercase font-weight-bold border-bottom pb-2 mb-4 d-inline-block">support</h6>
+          <!-- <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+          <p>
+            <a href="#!">Contact DocSpot</a>
+          </p>
+          <p>
+            <a href="#!">FAQ</a>
+          </p>
+          <p>
+            <a href="#!">Sitemap</a>
+          </p>
+          <p>
+            <a href="#!">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script type="text/javascript">
+    const toggleOverlay = () => $('#background-filter').toggleClass('d-none');
+
+    $('.open-filter-btn').on('click', function() {
+      $('.filter-menu').toggleClass('slide-in');
+      $('.filter-btn-container').toggleClass('slide-in');
+      toggleOverlay();
+    });
+
+    $('.filter-menu-close').on('click', function() {
+      $('.filter-menu').toggleClass('slide-in');
+      $('.filter-btn-container').toggleClass('slide-in');
+      toggleOverlay();
+    });
+
+    //home page: search bar
+    const providerSearchBar = $('.provider-searchbar');
+    providerSearchBar.on('focus', () => {
+      $('.quicksearch').removeClass('d-none');
+      $('#background-filter').removeClass('d-none');
+      $('.search-form-row').css('z-index', 9999);
+    });
+
+    providerSearchBar.on('blur', () => {
+      $('.quicksearch').addClass('d-none');
+      $('.results').addClass('d-none');
+      $('#background-filter').addClass('d-none');
+      $('.search-form-row').css('z-index', 'initial');
+    });
+
+    providerSearchBar.on('input', (e) => {
+      $('.quicksearch').addClass('d-none');
+      $('.results').removeClass('d-none');
+
+      if($(e.target).val() === '') {
+        $('.quicksearch').addClass('d-none');
+        $('.results').addClass('d-none');
+      }
+    });
+
+    //toggle dark overlay when click on hamburger menu
+    $('.ham-menu').on('click', () => {
+      toggleOverlay();
+    });
+
+    //bold the matched text
+    const displayMatches = (e) => {
+      $('.list-group-item a').each(function(){
+        let regex = new RegExp(e.target.value,'gi');
+        let isMatched = $(this).text().match(regex);
+        //isMatched is an array,
+        if(isMatched) {
+          let text = $(this).text().replace(isMatched[0] ,`<strong>${isMatched[0]}</strong>`);
+          $(this).html(text);
+        }
+      });
+
+    }
+
+    providerSearchBar.on('change', displayMatches);
+    providerSearchBar.on('keyup', displayMatches);
+
+    //duplicate card
+    let e = $('.single-card');
+    let imgNum = 1;
+    for (let i = 0; i < 3; i++) {
+      imgNum++;
+      let newCard = e.clone();
+      //console.log(newCard);
+      $(newCard).find('.card-img-left').each(function() {
+        $(this).css('background-image', 'url(../docspot_homepage/img/human'+imgNum+'.png)');
+      })
+      newCard.insertAfter(e);
+    }
+
+    //results page: map
+    let map;
+    function loadMapScenario() {
+      map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
+    }
+
+    $('.map-close').on('click', () => {
+      $('.map-view').addClass('d-none');
+    });
+
+    $('.map-view-icon').on('click', () => {
+      $('.map-view').removeClass('d-none');
+    });
+
+  </script>
+
+</body>
+</html>
