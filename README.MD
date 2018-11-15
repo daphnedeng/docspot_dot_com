@@ -4,7 +4,9 @@ New homepage for docspot.com
 ## Project Summary:
 The goal of this project is to give docspot.com's homepage a new look and feel, improve its user experience, fix the responsive issue, presents docspot's search feature clearly and nicely. 
 
-## DocSpot home page redesign questionnaire
+---
+
+## DocSpot homepage redesign questionnaire
 ### 24th September 2018
 
 **What is good about the existing page or working well?**
@@ -51,3 +53,43 @@ can't think of any at this moment
 **Do you have color preferences, look and feel preferences?**
 1.	Color that represents healthcare
 
+---
+
+## Next step :tada:
+Because I finished this homepage redesign project before deadline, I moved on the search result pages. I gathered requirements before dived into creation. 
+
+---
+
+## DocSpot results page redesign questionnaire
+### 29th October 2018
+
+**What is good about the existing page or working well?**
+
+*No information provided.*
+
+**What areas need improvement or not working well (feel free to include screenshot)? Why they don’t work well?**
+
+1. Filters bar, additional filters: Looks unfinished ugly, too many options
+2. Inconsistency compared with other page
+3. Profile card needs to be more standardized, with similar amount content and our contracted must-show message. Right now it’s too small for all things we want to show. We need to think about what do we really need to show on profile card.
+4. Mobile friendly
+5. Huge description block
+6. Related search is not helpful
+
+**What elements (starts from the most important) must show or highlight on this page?**
+
+1. Results, FIlters ( Maybe count number ), Map.
+2. We also highlight keywords like clinical interests that match the search or filter or related
+
+**What elements must the filter include on this page?**
+
+1. Everything inside the current filter 
+2. Count number for each option
+
+**Do you have layout in mind?**
+
+Maybe put half hidden filter section at right or top. I don’t have strong opinion about layout.
+
+**What are some similar sites that you like (please include URL)? What do you like about them?**
+
+No particular site in mind but maybe like a shopping site but with different profile card.
