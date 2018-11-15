@@ -24,13 +24,26 @@
   <!-- background overlay -->
   <div id="background-filter" class="d-none">
   </div>
+  <!-- fullscreen search overlay -->
+  <div id="full-screen-search-overlay" class="search-overlay">
+    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+    <div class="search-overlay-content">
+      <form>
+        <input type="text" placeholder="Search DocSpot" name="search" autofocus>
+        <button type="submit"><i class="fa fa-search text-light"></i></button>
+      </form>
+    </div>
+  </div>
+
   <!--nav item right example: https://www.codeply.com/go/ljI9F6aRLk -->
   <section class="container-fluid p-4 border-bottom">
     <nav class="navbar-expand-md">
-      <a href="#">
+      <a href="./index.html">
         <img src="./img/logo_transparent.png" alt="docspot's logo" class="logo-img">
       </a>
       <div class="mobile-menu position-relative">
+        <i class="fas fa-search fa-lg toggle-full-screen-search d-md-none" onclick="openSearch()"></i>
+
         <button class="ham-menu navbar-toggler float-right pr-0" type="button" data-toggle="collapse" data-target="#navItems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars fa-lg"></i>
         </button>
@@ -42,6 +55,9 @@
         </div>
       </div>
       <ul class="navbar-nav float-right d-none d-md-flex navbar-nav-mobile">
+        <li class="nav-item mx-md-3 position-relative">
+          <i class="fas fa-search fa-lg toggle-full-screen-search" onclick="openSearch()"></i>
+        </li>
         <li class="nav-item mx-md-3">
           <button type="button" name="button" class="btn btn-sm btn-block btn-primary">Leave a review</button>
         </li>
@@ -657,7 +673,7 @@
       let newCard = e.clone();
       //console.log(newCard);
       $(newCard).find('.card-img-left').each(function() {
-        $(this).css('background-image', 'url(../docspot_homepage/img/human'+imgNum+'.png)');
+        $(this).css('background-image', 'url(../docspot_dot_com/img/human'+imgNum+'.png)');
       })
       newCard.insertAfter(e);
     }
@@ -675,6 +691,15 @@
     $('.map-view-icon').on('click', () => {
       $('.map-view').removeClass('d-none');
     });
+
+    //full screen search overlay
+    const openSearch = () => {
+      $('#full-screen-search-overlay').show();
+    }
+
+    const closeSearch = () => {
+      $('#full-screen-search-overlay').hide();
+    }
 
   </script>
 

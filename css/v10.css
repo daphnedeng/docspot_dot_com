@@ -252,7 +252,7 @@ footer a, footer p {
 }
 
 .nav-item {
-  width: 200px;
+  width: 150px;
 }
 
 #navItems {
@@ -279,6 +279,11 @@ footer a, footer p {
   color:rgb(66, 66, 66);
 }
 
+.navbar-nav {
+  position: relative;
+  top: -37px;
+}
+
 .navbar-nav-mobile {
   position: relative;
   top: -37px;
@@ -289,6 +294,73 @@ footer a, footer p {
   background-color: white;
   z-index: 1;
   top: 0;
+}
+
+/* fullscreen search overlay */
+.search-overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+}
+
+.search-overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.search-overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: black;
+}
+/*
+.search-overlay .closebtn:hover {
+  color: #ccc;
+} */
+
+.search-overlay input[type=text] {
+  padding: 15px 20px;
+  font-size: 17px;
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  float: left;
+  width: 80%;
+  background: white;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search-overlay input[type=text]:focus {
+  outline: 0;
+  box-shadow: 0 0 5px 0.2rem rgba(0, 123, 255, 0.3);
+}
+
+.search-overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: var(--primary);
+  font-size: 17px;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.search-overlay button:hover {
+  background: #0062cc;
 }
 
 .provider-searchbar, .location-searchbar {
@@ -371,6 +443,20 @@ footer a, footer p {
   width: auto;
   position: relative;
   left: 10px;
+}
+
+.toggle-full-screen-search {
+  position: absolute;
+  right: 49px;
+  top: 6px;
+  cursor: pointer;
+}
+
+@media (min-width:768px) {
+  .toggle-full-screen-search {
+    right: 0;
+    top: 8px;
+  }
 }
 
 .w-100 {width: 100% !important;}
