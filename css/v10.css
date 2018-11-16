@@ -279,10 +279,10 @@ footer a, footer p {
   color:rgb(66, 66, 66);
 }
 
-.navbar-nav {
+/* .navbar-nav {
   position: relative;
   top: -37px;
-}
+} */
 
 .navbar-nav-mobile {
   position: relative;
