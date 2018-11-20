@@ -97,7 +97,7 @@
           <!-- single card -->
           <div class="col-md-12 col-xxl-6 single-card">
             <div class="card mb-5 shadow">
-              <div class="row no-gutters p-4">
+              <div class="row no-gutters p-4 individual-card">
                 <div class="col-3 col-md-2">
                   <div class="card-img-left">
                   </div>
@@ -679,9 +679,31 @@
     }
 
     //results page: map
-    let map;
     function loadMapScenario() {
-      map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
+      let map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+        center: new Microsoft.Maps.Location(37.260357, -121.972656)
+      });
+      let pushpins = Microsoft.Maps.TestDataGenerator.getPushpins(4, map.getBounds(), { icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png' });
+      let infobox = new Microsoft.Maps.Infobox(pushpins[0].getLocation(), { visible: false, autoAlignment: true });
+      infobox.setMap(map);
+      for (let i = 0; i < pushpins.length; i++) {
+          let pushpin = pushpins[i];
+          //Store some metadata with the pushpin
+          pushpin.metadata = {
+              title: 'Demo Pushpin' + i,
+              description: 'This pushpin' + i + ' is for demo only, doesn\'t represent real doctor\'s location.',
+              offset: new Microsoft.Maps.Point(0, 15)
+          };
+          Microsoft.Maps.Events.addHandler(pushpin, 'click', function (args) {
+              infobox.setOptions({
+                  location: args.target.getLocation(),
+                  title: args.target.metadata.title,
+                  description: args.target.metadata.description,
+                  visible: true
+              });
+          });
+      }
+      map.entities.push(pushpins);
     }
 
     $('.map-close').on('click', () => {

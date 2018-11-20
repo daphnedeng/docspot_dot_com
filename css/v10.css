@@ -59,7 +59,6 @@ footer a, footer p {
 
 .card {
   border-radius: 18px;
-  cursor: pointer;
 }
 
 @media (min-width: 1600px) {
@@ -81,6 +80,10 @@ footer a, footer p {
 .content-first {
   margin-top: 80px;
   margin-bottom: 16px;
+}
+
+.doc-profile >:last-child {
+  margin-bottom: 1.5rem;
 }
 
 [data-toggle="collapse"][aria-expanded="true"] > .rotate-if-collapsed {
@@ -160,6 +163,11 @@ footer a, footer p {
   .right-half-lg {
     position: relative;
   }
+}
+
+.individual-card {
+  cursor: pointer;
+  border-radius: 18px;
 }
 
 .list-group {
@@ -296,71 +304,29 @@ footer a, footer p {
   top: 0;
 }
 
-/* fullscreen search overlay */
-.search-overlay {
-  height: 100%;
-  width: 100%;
-  display: none;
-  position: fixed;
-  z-index: 4;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.96);
+.profile-info-header {
+  margin-top: 1rem;
 }
 
-.search-overlay-content {
-  position: relative;
-  top: 46%;
-  width: 80%;
-  text-align: center;
-  margin-top: 30px;
-  margin: auto;
+.profile-info p.collapse:not(.show) {
+    height: 4.2rem;
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
-.search-overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  cursor: pointer;
-  color: black;
-}
-/*
-.search-overlay .closebtn:hover {
-  color: #ccc;
-} */
-
-.search-overlay input[type=text] {
-  padding: 15px 20px;
-  font-size: 17px;
-  border: 1px solid rgba(0, 123, 255, 0.3);
-  float: left;
-  width: 80%;
-  background: white;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+.profile-info p.collapsing {
+    min-height: 4.2rem !important;
 }
 
-.search-overlay input[type=text]:focus {
-  outline: 0;
-  box-shadow: 0 0 5px 0.2rem rgba(0, 123, 255, 0.3);
+.profile-info a.collapsed:after  {
+    content: '+ Read More';
 }
 
-.search-overlay button {
-  float: left;
-  width: 20%;
-  padding: 15px;
-  background: var(--primary);
-  font-size: 17px;
-  border: 1px solid var(--primary);
-  cursor: pointer;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-
-.search-overlay button:hover {
-  background: #0062cc;
+.profile-info a:not(.collapsed):after {
+    content: '- Read Less';
 }
 
 .provider-searchbar, .location-searchbar {
@@ -428,6 +394,73 @@ footer a, footer p {
   .search-form-container {
     top: 45px;
   }
+}
+
+/* fullscreen search overlay */
+.search-overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+}
+
+.search-overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.search-overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: black;
+}
+/*
+.search-overlay .closebtn:hover {
+  color: #ccc;
+} */
+
+.search-overlay input[type=text] {
+  padding: 15px 20px;
+  font-size: 17px;
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  float: left;
+  width: 80%;
+  background: white;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search-overlay input[type=text]:focus {
+  outline: 0;
+  box-shadow: 0 0 5px 0.2rem rgba(0, 123, 255, 0.3);
+}
+
+.search-overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: var(--primary);
+  font-size: 17px;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.search-overlay button:hover {
+  background: #0062cc;
 }
 
 .slide-in {
