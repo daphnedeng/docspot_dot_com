@@ -20,7 +20,7 @@
 <!-- text effect -->
 <!-- https://stackoverflow.com/questions/44672914/css-text-carousel-with-fixed-text -->
 </head>
-<body>
+<body onload='loadMapScenario();'>
   <!-- background overlay -->
   <div id="background-filter" class="d-none">
   </div>
@@ -112,8 +112,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-4 bg-light">
-              this is map
+            <div class="col-12 col-lg-4 bg-light profile-map-container">
+              <div id="myMap">
+              </div>
             </div>
           </div>
         </div>
@@ -377,18 +378,26 @@
     providerSearchBar.on('keyup', displayMatches);
 
     //map
-    // let map;
-    // function loadMapScenario() {
-    //   map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
-    // }
-    //
-    // $('.map-close').on('click', () => {
-    //   $('.map-view').addClass('d-none');
-    // });
-    //
-    // $('.map-view-icon').on('click', () => {
-    //   $('.map-view').removeClass('d-none');
-    // });
+    function loadMapScenario() {
+      let map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+          center: new Microsoft.Maps.Location(37.260357, -121.972656) });
+      let center = map.getCenter();
+      let pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), { icon: '../docspot_dot_com/img/pushpin.png' });
+      let infobox = new Microsoft.Maps.Infobox(center,
+        {
+          title: 'Demo',
+          description: 'This pushpin is for demo only, doesn\'t represent real doctor\'s location.',
+          visible: false,
+          offset: new Microsoft.Maps.Point(0, 30)
+        });
+      infobox.setMap(map);
+      Microsoft.Maps.Events.addHandler(pushpin, 'click', function () {
+          infobox.setOptions({ visible: true });
+      });
+      map.entities.push(pushpin);
+
+    }
+
 
     //full screen search overlay
     const openSearch = () => {

@@ -492,6 +492,12 @@ footer a, footer p {
   }
 }
 
+@media (max-width: 992px) {
+  .profile-map-container {
+    height: 300px;
+  }
+}
+
 .w-100 {width: 100% !important;}
 .w-95 {width: 95% !important;}
 .w-80 {width: 80% !important;}

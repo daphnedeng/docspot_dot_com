@@ -95,7 +95,7 @@
         <p>Showing 1 - 4 of 198</p>
         <div class="row">
           <!-- single card -->
-          <div class="col-md-12 col-xxl-6 single-card">
+          <div class="col-md-12 col-xxl-6 single-card" onclick="location.href='./profile.html';">
             <div class="card mb-5 shadow">
               <div class="row no-gutters p-4 individual-card">
                 <div class="col-3 col-md-2">
@@ -683,16 +683,20 @@
       let map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
         center: new Microsoft.Maps.Location(37.260357, -121.972656)
       });
-      let pushpins = Microsoft.Maps.TestDataGenerator.getPushpins(4, map.getBounds(), { icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png' });
-      let infobox = new Microsoft.Maps.Infobox(pushpins[0].getLocation(), { visible: false, autoAlignment: true });
+      let pushpins = Microsoft.Maps.TestDataGenerator.getPushpins(4, map.getBounds(), { icon: '../docspot_dot_com/img/pushpin.png' });
+      let infobox = new Microsoft.Maps.Infobox(pushpins[0].getLocation(),
+      {
+        visible: false,
+        autoAlignment: true,
+        offset: new Microsoft.Maps.Point(0, 30)
+      });
       infobox.setMap(map);
       for (let i = 0; i < pushpins.length; i++) {
           let pushpin = pushpins[i];
           //Store some metadata with the pushpin
           pushpin.metadata = {
               title: 'Demo Pushpin' + i,
-              description: 'This pushpin' + i + ' is for demo only, doesn\'t represent real doctor\'s location.',
-              offset: new Microsoft.Maps.Point(0, 15)
+              description: 'This pushpin' + i + ' is for demo only, doesn\'t represent real doctor\'s location.'
           };
           Microsoft.Maps.Events.addHandler(pushpin, 'click', function (args) {
               infobox.setOptions({
