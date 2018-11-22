@@ -10,8 +10,13 @@ footer a, footer p {
   font-size: 14px;
 }
 
-.btn {
-  border-radius: 2.25rem;
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  color: var(--primary);
+  background-color: white;
 }
 
 #background-filter {
@@ -57,6 +62,10 @@ footer a, footer p {
   }
 }
 
+.btn {
+  border-radius: 2.25rem;
+}
+
 .card {
   border-radius: 18px;
 }
@@ -69,7 +78,7 @@ footer a, footer p {
 
 .card-img-left {
   background-image: url('../img/human1.png');
-  background-position: center 14%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
