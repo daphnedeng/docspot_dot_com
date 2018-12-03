@@ -56,7 +56,7 @@ can't think of any at this moment
 ---
 
 ## Next step :tada:
-Because I finished this homepage redesign project before deadline, I moved on the search result pages. I gathered requirements before dived into creation. 
+I finished this homepage redesign project before deadline, so I moved on the search result pages. I gathered requirements before dived into creation. 
 
 ---
 
@@ -93,3 +93,20 @@ Maybe put half hidden filter section at right or top. I don’t have strong opin
 **What are some similar sites that you like (please include URL)? What do you like about them?**
 
 No particular site in mind but maybe like a shopping site but with different profile card.
+
+---
+## Addition Information: docspot.com sitemap and userflow 
+### Sitemap:
+![](img/docspot_site_map.png)
+
+### Userflow:
+![](img/docspot_userflow.png)
+
+--- 
+
+#### Created with:
+* HTML5
+* CSS3
+* JavaScript
+* jQuery
+* Bootstrap4
